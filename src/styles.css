@@ -21,9 +21,9 @@
 
 .movie-item {
   flex: 1 1 200px;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc;
   padding: 16px;
-  border-radius: 8px;
+  border-radius: 8px; */
 }
 
 .movie-item a {
@@ -31,5 +31,5 @@
 }
 
 .movie-detail {
-  padding: 16px;
+  padding: 16px 0;
 }

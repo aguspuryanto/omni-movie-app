@@ -22,4 +22,8 @@ export class MovieDetailComponent implements OnInit {
       this.movie = movies.find(movie => movie.id === id);
     });
   }
+
+  goBack(): void {
+    window.history.back();
+  }
 }

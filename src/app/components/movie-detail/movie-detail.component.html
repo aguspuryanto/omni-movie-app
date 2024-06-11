@@ -1,7 +1,21 @@
-<div *ngIf="movie" class="movie-detail">
-    <img class="w-full" [src]="movie.imgPath" [alt]="movie.name" />
-    <h2>{{ movie.name }}</h2>
-    <p><strong>Duration:</strong> {{ movie.duration }}</p>
-    <p><strong>Score:</strong> {{ movie.userRating }}</p>
-    <p>{{ movie.description }}</p>
+<div class="d-grid gap-2 d-md-block">
+    <button class="btn btn-secondary" (click)="goBack()">Go Back</button>
+</div>
+<hr />
+<div class="d-flex align-items-start">
+    <div *ngIf="movie" class="row xmovie-detail">
+        <div class="col-3">
+            <img class="img-fluid" [src]="movie.imgPath" [alt]="movie.name" />
+        </div>
+
+        <div class="col-9">
+            <h2>Details</h2>
+            <div>Genre: {{ movie.genre }}</div>
+            <div>Language: {{ movie.language }}</div>
+            <div>Duration: {{ movie.duration }}</div>
+            <div>User Rating: {{ movie.userRating }}</div>
+            <h4>Synopsis</h4>
+            <div>{{ movie.description }}</div>
+        </div>
+    </div>
 </div>

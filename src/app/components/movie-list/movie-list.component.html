@@ -9,11 +9,11 @@
         />
     </div>
 </div>
-
+<hr />
 <div class="movie-list">
   <div *ngFor="let movie of filteredMovies" class="movie-item">
     <a [routerLink]="['/movie', movie.id]">
-        <img class="w-full" [src]="movie.imgPath" [alt]="movie.name" />
+        <img class="img-fluid" [src]="movie.imgPath" [alt]="movie.name" />
         <h4 class="title">{{ movie.name }}</h4>
         <div>Duration: {{ movie.duration }} min</div>
         <div>User Rating: {{ movie.userRating }}</div>
