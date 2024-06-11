@@ -9,6 +9,7 @@ import { MovieService } from 'src/app/services/movie.service';
 })
 export class MovieListComponent implements OnInit {
   movies: Movie[] = [];
+  filteredMovies: Movie[] = [];
   searchText: string = '';
 
   constructor(private movieService: MovieService) { }
@@ -16,16 +17,13 @@ export class MovieListComponent implements OnInit {
   ngOnInit(): void {
     this.movieService.getMovies().subscribe(movies => {
       this.movies = movies;
+      this.filteredMovies = movies;
     });
   }
 
   filterMovies(): void {
-    // if (!this.searchText) {      
-      this.movies = this.movies.filter(movie =>
-        movie.name.toLowerCase().includes(this.searchText.toLowerCase())
-      );
-    // } else {
-    //   this.ngOnInit();
-    // }
+    this.filteredMovies = this.movies.filter(movie =>
+      movie.name.toLowerCase().includes(this.searchText.toLowerCase())
+    );
   }
 }

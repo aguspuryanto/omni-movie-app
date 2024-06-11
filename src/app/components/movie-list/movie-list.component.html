@@ -11,7 +11,7 @@
 </div>
 
 <div class="movie-list">
-  <div *ngFor="let movie of movies" class="movie-item">
+  <div *ngFor="let movie of filteredMovies" class="movie-item">
     <a [routerLink]="['/movie', movie.id]">
         <img class="w-full" [src]="movie.imgPath" [alt]="movie.name" />
         <h4 class="title">{{ movie.name }}</h4>
