@@ -20,8 +20,12 @@ export class MovieListComponent implements OnInit {
   }
 
   filterMovies(): void {
-    this.movies = this.movies.filter(movie =>
-      movie.name.toLowerCase().includes(this.searchText.toLowerCase())
-    );
+    // if (!this.searchText) {      
+      this.movies = this.movies.filter(movie =>
+        movie.name.toLowerCase().includes(this.searchText.toLowerCase())
+      );
+    // } else {
+    //   this.ngOnInit();
+    // }
   }
 }
