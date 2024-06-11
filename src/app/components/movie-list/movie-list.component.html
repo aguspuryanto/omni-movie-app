@@ -1,0 +1,22 @@
+<div class="search-container">
+    <div class="form-group">
+        <input
+            type="text"
+            class="form-control"
+            placeholder="Search movies..."
+            [(ngModel)]="searchText"
+            (input)="filterMovies()"
+        />
+    </div>
+</div>
+
+<div class="movie-list">
+  <div *ngFor="let movie of movies" class="movie-item">
+    <a [routerLink]="['/movie', movie.id]">
+        <img class="w-full" [src]="movie.imgPath" [alt]="movie.name" />
+        <h4 class="title">{{ movie.name }}</h4>
+        <div>Duration: {{ movie.duration }} min</div>
+        <div>User Rating: {{ movie.userRating }}</div>
+    </a>
+  </div>
+</div>

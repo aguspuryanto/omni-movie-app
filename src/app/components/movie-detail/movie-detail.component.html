@@ -1,0 +1,7 @@
+<div *ngIf="movie" class="movie-detail">
+    <img class="w-full" [src]="movie.imgPath" [alt]="movie.name" />
+    <h2>{{ movie.name }}</h2>
+    <p><strong>Duration:</strong> {{ movie.duration }}</p>
+    <p><strong>Score:</strong> {{ movie.userRating }}</p>
+    <p>{{ movie.description }}</p>
+</div>

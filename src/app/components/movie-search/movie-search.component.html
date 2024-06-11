@@ -1,0 +1,6 @@
+<form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <input (change)="searchMovies($event)" type="text" class="form-control" id="query" formControlName="query">
+    </div>
+    <p></p>
+</form>

@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+.search-container {
+  margin-bottom: 16px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.movie-item {
+  flex: 1 1 200px;
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.movie-item a {
+  text-decoration: none;
+}
+
+.movie-detail {
+  padding: 16px;
+}
